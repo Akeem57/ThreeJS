@@ -22,7 +22,7 @@ const colorTexture = textureLoader.load(
 
 //Mesh
 const geometry = new THREE.PlaneBufferGeometry(1,1);
-const material = new THREE.MeshBasicMaterial({ map : textureLoader});
+const material = new THREE.MeshBasicMaterial({ map: colorTexture });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
