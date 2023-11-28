@@ -9,16 +9,7 @@ const scene = new THREE.Scene();
 
 //texture
 const textureLoader = new THREE.TextureLoader();
-const colorTexture = textureLoader.load(
-    "./textures/color.png",
-    function(texture) {
-        console.log("Texture chargée avec succès");
-    },
-    undefined,
-    function(error) {
-        console.error("Une erreur est survenue lors du chargement de la texture", error);
-    }
-);
+const colorTexture = textureLoader.load("./textures/color.png");
 
 //Mesh
 const geometry = new THREE.PlaneBufferGeometry(1,1);
