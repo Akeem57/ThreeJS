@@ -9,11 +9,12 @@ const scene = new THREE.Scene();
 
 //texture
 const textureLoader = new THREE.TextureLoader();
-const colorTexture = textureLoader.load("./textures/color.png");
+const colorTexture = textureLoader.load("./texture/coran_bord_de_l_eau_redimensionné.jpg");
 
 //Mesh
 const geometry = new THREE.PlaneBufferGeometry(1,1);
-const material = new THREE.MeshBasicMaterial({ map: colorTexture });
+const material = new THREE.MeshBasicMaterial();
+material.map=colorTexture;
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
@@ -40,7 +41,7 @@ const animate = function(){
     const elapsedTime = clock.getElapsedTime();
 
     //Update Rotation on X Axis
-    //mesh.rotation.x = elapsedTime * 0.5;
+    mesh.rotation.x = elapsedTime * 0.5;
 
     //Renderer
     renderer.render(scene,camera);
