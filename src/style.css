@@ -5,10 +5,12 @@
 
 body {
   height: 100vh;
-  background-color: black;
+  /*background: linear-gradient(0deg, rgb(198,223,243), rgb(116,152,169));*/
 }
 .draw {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
+
