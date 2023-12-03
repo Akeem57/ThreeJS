@@ -15,7 +15,7 @@ scene.add(ambientLight, pointLight);
 
 //texture
 const textureLoader = new THREE.TextureLoader();
-const particlesTexture = textureLoader.load("./texture/snow.png")
+const particlesTexture = textureLoader.load("./texture/snow2.png")
 
 //Mesh
 const geometry = new THREE.BufferGeometry(0.2,0.2);
@@ -29,7 +29,7 @@ geometry.setAttribute("position", new THREE.BufferAttribute(positionArray, 3));
 const material = new THREE.PointsMaterial({map: particlesTexture});
 material.size = 0.02;
 material.transparent = true;
-material.alphaTest = 0.05;
+/*material.alphaTest = 0.05;*/
 material.depthTest = false;
 const points = new THREE.Points(geometry, material);
 scene.add(points);
@@ -69,8 +69,8 @@ const animate = function(){
     const elapsedTime = clock.getElapsedTime();
 
     //animate particles
-    camera.rotation.y = elapsedTime * 0.1;
-    camera.rotation.x = elapsedTime * 0.1;
+    /*camera.rotation.y = elapsedTime * 0.1;*/
+    camera.rotation.x = elapsedTime * 0.05;
 
     
 
